@@ -1,0 +1,4 @@
+name = "shorty-worker"
+main = "src/index.ts"
+compatibility_date = "2022-10-06"
+
