@@ -81,7 +81,7 @@ export default {
         if(!link) {
             return new Response("", {status: 404})
         } else {
-            return Response.redirect(link);
+            return Response.redirect(this.withHttps(link));
         }
 
         return new Response("Hello world", {status: 404})
@@ -95,5 +95,9 @@ export default {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         return result;
-    }
+    },
+
+    withHttps(url: string) : string{
+        return !/^https?:\/\//i.test(url) ? `https://${url}` : url
+    },
 };
