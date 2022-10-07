@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-screen flex flex-col gap-4 items-center bg-gray-900 px-10 text-white">
 
-    <div class="w-full flex flex-col items-center gap-1 mt-[14rem]">
+    <div class="w-full flex flex-col items-center gap-1 mt-[8rem] xl:mt-[14rem] transition-all">
       <h1 class="text-4xl font-bold">SHORTY</h1>
       <h3 class="uppercase">A URL Shortener living on the Edge.</h3>
     </div>
@@ -48,11 +48,11 @@ duration-150 ease-in-out"
           :class="showSuccess ? 'animate-fade' : ''">Success</h2>
     </div>
     <div class="w-full flex justify-center">
-      <div class=" bg-gray-800 px-4 py-2 rounded text-center cursor-pointer group flex relative" v-if="short"
+      <div class=" bg-gray-800 px-6 py-2 rounded text-center cursor-pointer group flex relative" v-if="short"
            @click="copy(short)">
         <a class="text-gray-300 hover:text-white">{{ short }}</a>
         <span
-            class="group-hover:opacity-100 transition-opacity bg-gray-800 px-2 text-sm text-gray-100 rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full opacity-50 m-4 mx-auto">
+            class="group-hover:opacity-100 transition-opacity bg-gray-800 px-2 py-1 w-10/12 text-sm text-gray-100 rounded-md absolute left-1/2 -translate-x-1/2 translate-y-full opacity-50 m-4 mx-auto">
           Click to Copy
         </span>
       </div>
